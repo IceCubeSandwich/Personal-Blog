@@ -10,7 +10,7 @@ export default siteConfig({
   
   // basic site info (required)
   name: 'C2Whisperer',
-  domain: 'C2Whisperer.com',
+  domain: 'c2-whisperer-blog.vercel.app',
   author: 'Tyrrell',
   
   // open graph metadata (optional)
