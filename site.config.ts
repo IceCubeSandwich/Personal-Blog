@@ -18,7 +18,7 @@ export default siteConfig({
   
   // social usernames (optional)
   twitter: 'C2Whisperer',
-  github: 'C2Whisperer',
+  github: 'IceCubeSandwich',
   linkedin: 'tyrrell-brewster',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
