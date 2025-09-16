@@ -9,7 +9,7 @@ export default siteConfig({
   rootNotionSpaceId: null,
   
   // basic site info (required)
-  name: 'C2Whisperer',
+  name: '0xTB',
   domain: 'c2-whisperer-blog.vercel.app',
   author: 'Tyrrell',
   
@@ -17,7 +17,7 @@ export default siteConfig({
   description: 'Silent channels, loud impact.',
   
   // social usernames (optional)
-  twitter: 'C2Whisperer',
+  twitter: '0xtb_',
   github: 'IceCubeSandwich',
   linkedin: 'tyrrell-brewster',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
