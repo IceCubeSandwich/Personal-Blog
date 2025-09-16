@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 export function GitHubShareButton() {
   return (
     <a
-      href='https://github.com/C2Whisperer/C2Whisperer-Blog'
+      href='https://github.com/IceCubeSandwich/Personal-Blog'
       target='_blank'
       rel='noopener noreferrer'
       className={styles.githubCorner}
