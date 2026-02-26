@@ -45,6 +45,27 @@ const getNavigationLinkPages = pMemoize(
 export async function getPage(pageId: string): Promise<ExtendedRecordMap> {
   let recordMap = await notion.getPage(pageId)
 
+  // Sanitize blocks: remove any blocks with undefined/null IDs
+  // which cause uuidToId crashes in react-notion-x
+  if (recordMap?.block) {
+    for (const [key, value] of Object.entries(recordMap.block)) {
+      if (!value?.value?.id) {
+        console.warn(`Removing block with missing id: ${key}`)
+        delete recordMap.block[key]
+      }
+    }
+
+    // Also clean up content arrays that reference non-existent blocks
+    for (const [, value] of Object.entries(recordMap.block)) {
+      const block = value?.value
+      if (block?.content) {
+        block.content = block.content.filter(
+          (id: string) => id && recordMap.block[id]?.value?.id
+        )
+      }
+    }
+  }
+
   if (navigationStyle !== 'default') {
     // ensure that any pages linked to in the custom navigation header have
     // their block info fully resolved in the page record map so we know
